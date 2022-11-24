@@ -16,10 +16,11 @@ year.innerText = currentYear + 1;
 // Updating countdown time
 function updateCountdown() {
   const currentTime = new Date();
-  const diff = newYearTime - currentTime;
+  const diff = newYearTime - currentTime; //getting time for the entire 365days
 
+  // Calculating time in hours minutes and seconds
   const d = Math.floor(diff / 1000 / 60 / 60 / 24);
-  const h = Math.floor(diff / 1000 / 60 / 60) % 24;
+  const h = Math.floor(diff / 1000 / 60 / 60) % 24; //getting the difference
   const m = Math.floor(diff / 1000 / 60) % 60;
   const s = Math.floor(diff / 1000) % 60;
 
